@@ -1,0 +1,25 @@
+{
+  "name": "eslides-core",
+  "version": "1.0.0",
+  "description": "Let's serve PPTs in a better way",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranshuchittoraeslides-core/static-server.git"
+  },
+  "author": "Pranshu Chittora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pranshuchittoraeslides-core/static-serve/issues"
+  },
+  "homepage": "https://github.com/pranshuchittora/static-server#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
