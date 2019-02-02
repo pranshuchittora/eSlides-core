@@ -24,3 +24,14 @@ Reveal.initialize({
     }
   ]
 });
+
+let url_string = window.location.href;
+
+let url = new URL(url_string);
+let module = url.searchParams.get("module");
+let session = url.searchParams.get("session");
+let slo = url.searchParams.get("slo");
+
+document.getElementById(
+  "module"
+).dataset.markdown = `../../../Slides/M${module}/S${session}/SLO${slo}.md`;
