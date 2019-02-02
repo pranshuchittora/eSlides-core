@@ -2,8 +2,8 @@ var link = document.createElement("link");
 link.rel = "stylesheet";
 link.type = "text/css";
 link.href = window.location.search.match(/print-pdf/gi)
-  ? "../../../../css/print/pdf.css"
-  : "../../../../css/print/paper.css";
+  ? "../css/print/pdf.css"
+  : "../css/print/paper.css";
 document.getElementsByTagName("head")[0].appendChild(link);
 window.location.search.match(/pdf-download/) ? window.print() : null;
 
@@ -12,11 +12,11 @@ window.location.search.match(/pdf-download/) ? window.print() : null;
 // - https://github.com/hakimel/reveal.js#dependencies
 Reveal.initialize({
   dependencies: [
-    { src: "../../../../plugin/markdown/marked.js" },
-    { src: "../../../../plugin/markdown/markdown.js" },
-    { src: "../../../../plugin/notes/notes.js", async: true },
+    { src: "../plugin/markdown/marked.js" },
+    { src: "../plugin/markdown/markdown.js" },
+    { src: "../plugin/notes/notes.js", async: true },
     {
-      src: "../../../../plugin/highlight/highlight.js",
+      src: "../plugin/highlight/highlight.js",
       async: true,
       callback: function() {
         hljs.initHighlightingOnLoad();
@@ -32,6 +32,8 @@ let module = url.searchParams.get("module");
 let session = url.searchParams.get("session");
 let slo = url.searchParams.get("slo");
 
-document.getElementById(
-  "module"
-).dataset.markdown = `../../../Slides/M${module}/S${session}/SLO${slo}.md`;
+document.getElementById("module")
+  ? (document.getElementById(
+      "module"
+    ).dataset.markdown = `./Slides/M${module}/S${session}/SLO${slo}.md`)
+  : null;
