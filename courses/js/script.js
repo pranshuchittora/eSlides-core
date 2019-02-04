@@ -31,6 +31,10 @@ let url = new URL(url_string);
 let module = url.searchParams.get("module");
 let session = url.searchParams.get("session");
 let slo = url.searchParams.get("slo");
+// Validations
+if (!Number.isInteger(parseInt(module))) alert("Invalud Module");
+if (!Number.isInteger(parseInt(session))) alert("Invalud Session");
+if (!Number.isInteger(parseInt(slo))) alert("Invalud SLO");
 
 document.getElementById("module")
   ? (document.getElementById(
