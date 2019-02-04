@@ -1,6 +1,6 @@
-<img src="./icon/icon.png" height="200px" style="display:block;
-    margin:auto;"/>
-
+<p align="center"> 
+<img src="./icon/icon.png" height="200px" />
+</p>
 <h1 align="center">eSlides</h1>
 eSlides is an online tool to serve content is a better way. It overcomes the issues with conventional PPTs.
 
