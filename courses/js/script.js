@@ -32,9 +32,9 @@ let module = url.searchParams.get("module");
 let session = url.searchParams.get("session");
 let slo = url.searchParams.get("slo");
 // Validations
-if (module && !Number.isInteger(parseInt(module))) alert("Invalud Module");
-if (session && !Number.isInteger(parseInt(session))) alert("Invalud Session");
-if (slo && !Number.isInteger(parseInt(slo))) alert("Invalud SLO");
+if (module && !Number.isInteger(parseInt(module))) alert("Invalid Module");
+if (session && !Number.isInteger(parseInt(session))) alert("Invalid Session");
+if (slo && !Number.isInteger(parseInt(slo))) alert("Invalid SLO");
 
 if (module && session && slo) {
   document.getElementById("module")
