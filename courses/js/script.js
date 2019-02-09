@@ -32,12 +32,14 @@ let module = url.searchParams.get("module");
 let session = url.searchParams.get("session");
 let slo = url.searchParams.get("slo");
 // Validations
-if (!Number.isInteger(parseInt(module))) alert("Invalud Module");
-if (!Number.isInteger(parseInt(session))) alert("Invalud Session");
-if (!Number.isInteger(parseInt(slo))) alert("Invalud SLO");
+if (module && !Number.isInteger(parseInt(module))) alert("Invalud Module");
+if (session && !Number.isInteger(parseInt(session))) alert("Invalud Session");
+if (slo && !Number.isInteger(parseInt(slo))) alert("Invalud SLO");
 
-document.getElementById("module")
-  ? (document.getElementById(
-      "module"
-    ).dataset.markdown = `./Slides/M${module}/S${session}/SLO${slo}.md`)
-  : null;
+if (module && session && slo) {
+  document.getElementById("module")
+    ? (document.getElementById(
+        "module"
+      ).dataset.markdown = `./Slides/M${module}/S${session}/SLO${slo}.md`)
+    : null;
+}

@@ -4,3 +4,13 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati labore ut, s
 
 
 <img class="imgLarge" src="./Resources/M1/dev-tools.png" />
+
+
+```c
+#include <stdio.h>
+int main(){
+    printf("Hello World");
+    
+    return 0;
+}
+```
