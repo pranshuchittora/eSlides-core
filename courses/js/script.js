@@ -37,6 +37,7 @@ if (session && !Number.isInteger(parseInt(session))) alert("Invalid Session");
 if (slo && !Number.isInteger(parseInt(slo))) alert("Invalid SLO");
 
 if (module && session && slo) {
+  document.title = `M${module}-S${session}-SLO${slo}`;
   document.getElementById("module")
     ? (document.getElementById(
         "module"
